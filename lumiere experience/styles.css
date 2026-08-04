@@ -1,0 +1,33 @@
+/* ==========================================================================
+   IMPORTACIÓN DE FUENTES DESDE GOOGLE FONTS
+   Montserrat: Para los textos limpios y modernos.
+   Cinzel: Para el logo elegante con estilo romano.
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+/* Estilos Generales - Fondo Blanco Limpio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff; /* Fondo Blanco Puro */
+    color: #1a1a1a;            /* Texto Negro para contraste impecable */
+    line-height: 1.6;
+}
+
+/* Encabezado y Menú de Navegación */
+header {
+    background-color: #ffffff; /* Encabezado Blanco */
+    border-bottom: 2px solid #c2a685; /* Línea divisoria Marrón Claro */
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
