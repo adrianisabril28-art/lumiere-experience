@@ -1,33 +1,543 @@
-/* ==========================================================================
-   IMPORTACIÓN DE FUENTES DESDE GOOGLE FONTS
-   Montserrat: Para los textos limpios y modernos.
-   Cinzel: Para el logo elegante con estilo romano.
-   ========================================================================== */
-@import url('https://googleapis.com');
+/* ========================================
+   LUMIÈRE EXPERIENCE
+   ESTILOS GENERALES
+======================================== */
 
-/* Estilos Generales - Fondo Blanco Limpio */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* ========================================
+   VARIABLES
+======================================== */
+
+:root {
+    --dorado: #b88968;
+    --dorado-oscuro: #9f7051;
+
+    --negro: #292523;
+    --texto: #5f5752;
+
+    --crema: #f8f4f0;
+    --beige: #eee4dc;
+    --blanco: #ffffff;
+
+    --sombra: 0 10px 30px rgba(41, 37, 35, 0.08);
+
+    --titulo: 'Playfair Display', serif;
+    --texto-fuente: 'DM Sans', sans-serif;
+}
+
+
+/* ========================================
+   CONFIGURACIÓN GENERAL
+======================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #ffffff; /* Fondo Blanco Puro */
-    color: #1a1a1a;            /* Texto Negro para contraste impecable */
-    line-height: 1.6;
+    font-family: var(--texto-fuente);
+    color: var(--texto);
+    background-color: var(--blanco);
+    line-height: 1.7;
 }
 
-/* Encabezado y Menú de Navegación */
-header {
-    background-color: #ffffff; /* Encabezado Blanco */
-    border-bottom: 2px solid #c2a685; /* Línea divisoria Marrón Claro */
-    padding: 1.5rem 2rem;
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    width: 100%;
+    min-height: 80px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid #eee6e0;
+
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo h1 {
+    font-family: var(--titulo);
+
+    font-size: 27px;
+
+    color: var(--negro);
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   MENÚ
+======================================== */
+
+.navbar {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.navbar a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: var(--negro);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--dorado);
+}
+
+
+/* Línea debajo del menú */
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    left: 0;
+    bottom: -6px;
+
+    background-color: var(--dorado);
+
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   HERO / INICIO
+======================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    /*
+    IMAGEN PRINCIPAL
+    */
+
+    background-image:
+
+        linear-gradient(
+            rgba(41, 37, 35, 0.45),
+            rgba(41, 37, 35, 0.45)
+        ),
+
+        url("img/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* Contenido del Hero */
+
+.hero-content {
+    max-width: 800px;
+
+    color: var(--blanco);
+}
+
+
+/* Título */
+
+.hero-content h2 {
+    font-family: var(--titulo);
+
+    font-size: clamp(40px, 6vw, 72px);
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Texto */
+
+.hero-content p {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-size: 17px;
+
+    color: #f8f5f2;
+}
+
+
+/* ========================================
+   BOTÓN
+======================================== */
+
+.btn-primary {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background-color: var(--dorado);
+
+    color: var(--blanco);
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--dorado-oscuro);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(184, 137, 104, 0.3);
+}
+
+
+/* ========================================
+   SECCIONES
+======================================== */
+
+.section {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 100px 7%;
+}
+
+
+/* Títulos */
+
+.section > h2 {
+    position: relative;
+
+    font-family: var(--titulo);
+
+    color: var(--negro);
+
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+/* Línea decorativa */
+
+.section > h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+
+    height: 3px;
+
+    margin: 15px auto 0;
+
+    background-color: var(--dorado);
+}
+
+
+/* ========================================
+   NOSOTROS
+======================================== */
+
+#nosotros {
+    text-align: center;
+
+    background-color: var(--crema);
+}
+
+#nosotros p {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   SERVICIOS
+======================================== */
+
+#servicios {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    background-color: var(--blanco);
+}
+
+
+/* Título de servicios */
+
+#servicios > h2 {
+    width: 100%;
+}
+
+
+/* ========================================
+   TARJETAS
+======================================== */
+
+.card {
+    width: 31%;
+
+    min-width: 280px;
+
+    padding: 35px 28px;
+
+    background-color: var(--crema);
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: var(--sombra);
+
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(41, 37, 35, 0.12);
+}
+
+
+.card h3 {
+    font-family: var(--titulo);
+
+    color: var(--negro);
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+
+/* ========================================
+   GALERÍA
+======================================== */
+
+#galeria {
+    max-width: 1200px;
+
+    text-align: center;
+
+    background-color: var(--crema);
+}
+
+#galeria p {
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+}
+
+
+/* ========================================
+   TIENDA
+======================================== */
+
+#shop {
+    text-align: center;
+
+    background-color: var(--blanco);
+}
+
+#shop > p {
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+}
+
+
+/* ========================================
+   PRODUCTOS
+======================================== */
+
+.producto-card {
+    width: 280px;
+
+    background-color: var(--crema);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+    margin: 20px auto;
+
+    transition: all 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(41, 37, 35, 0.12);
+}
+
+
+/* Imagen del producto */
+
+.producto-card img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 4%;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 700px) {
+
+    .header {
+        min-height: auto;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 60px 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .section > h2 {
+        font-size: 36px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .producto-card {
+        width: 100%;
+
+        max-width: 320px;
+    }
+
 }
