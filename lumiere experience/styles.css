@@ -150,13 +150,13 @@ body {
 
     display: flex;
 
-    align-items: center;
+    align-items: flex-start;
 
     justify-content: center;
 
     text-align: center;
 
-    padding: 80px 20px;
+    padding: 40px 20px 80px 20px;
 
     /*
     IMAGEN PRINCIPAL
@@ -171,9 +171,9 @@ body {
 
         url("img/banner.jpg");
 
-    background-size: contain;
+    background-size: auto 85%;
 
-    background-position: center;
+    background-position: center center;
 
     background-repeat: no-repeat;
 
@@ -186,15 +186,16 @@ body {
 .hero-content {
     max-width: 800px;
     color: var(--negro);
+    margin-top: -10px;
 }
 
 /* Título */
 
 .hero-content h2 {
     font-family: var(--titulo);
-    font-size: clamp(40px, 6vw, 72px);
+    font-size: clamp(36px, 5.5vw, 64px);
     line-height: 1.15;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: var(--negro);
     text-shadow: 0 2px 15px rgba(255, 255, 255, 0.9);
 }
