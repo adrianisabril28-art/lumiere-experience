@@ -150,13 +150,13 @@ body {
 
     display: flex;
 
-    align-items: flex-start;
+    align-items: center;
 
     justify-content: center;
 
     text-align: center;
 
-    padding: 40px 20px 80px 20px;
+    padding: 80px 20px;
 
     /*
     IMAGEN PRINCIPAL
@@ -165,15 +165,15 @@ body {
     background-image:
 
         linear-gradient(
-            rgba(248, 244, 240, 0.55),
-            rgba(248, 244, 240, 0.55)
+            rgba(248, 244, 240, 0.7),
+            rgba(248, 244, 240, 0.7)
         ),
 
         url("img/banner.jpg");
 
-    background-size: auto 85%;
+    background-size: cover;
 
-    background-position: center center;
+    background-position: center;
 
     background-repeat: no-repeat;
 
@@ -193,8 +193,9 @@ body {
 
 .hero-content h2 {
     font-family: var(--titulo);
-    font-size: clamp(36px, 5.5vw, 64px);
+    font-size: clamp(40px, 6vw, 72px);
     line-height: 1.15;
+    margin-top: -30px;
     margin-bottom: 15px;
     color: var(--negro);
     text-shadow: 0 2px 15px rgba(255, 255, 255, 0.9);
