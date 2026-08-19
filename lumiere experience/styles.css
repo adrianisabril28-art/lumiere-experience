@@ -676,3 +676,21 @@ body {
     display: block;
     border-radius: 15px 15px 0 0;
 }
+
+.productos-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 25px; 
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.producto-card {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
