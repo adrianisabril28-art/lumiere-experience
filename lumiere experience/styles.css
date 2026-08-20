@@ -694,3 +694,65 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.nosotros-intro {
+  max-width: 750px;
+  margin: 0 auto 35px auto;
+  text-align: center;
+  color: #555;
+}
+
+.equipo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.integrante-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  flex: 1 1 300px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.integrante-card:hover {
+  transform: translateY(-5px);
+}
+
+.integrante-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.integrante-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.integrante-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.integrante-info p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
