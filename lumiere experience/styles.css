@@ -788,42 +788,35 @@ body {
   right: 0;
 }
 #contacto, #ubicacion {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: #4a2328;
+  color: #f8f4f0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-#contacto p, #ubicacion p {
-  margin-bottom: 15px;
+#contacto {
+  padding-top: 35px;
+  padding-bottom: 15px;
 }
 
 #ubicacion {
-  padding-bottom: 15px;
-}
-#contacto, #ubicacion {
-  background-color: #4a2328; 
-  color: #f8f4f0;            
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 15px;
+  padding-bottom: 25px;
 }
 
-/* Títulos y líneas decorativas en las secciones Vino */
 #contacto > h2, #ubicacion > h2 {
   color: #ffffff;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 #contacto > h2::after, #ubicacion > h2::after {
-  background-color: #d4af37; 
-  margin-top: 10px;
+  background-color: #d4af37;
+  margin-top: 8px;
 }
 
-/* Textos e íconos */
 #contacto p, #ubicacion p {
   color: #eee4dc;
   margin-bottom: 10px;
-}
-
-/* Ubicación al mapa */
-#ubicacion {
-  padding-bottom: 20px;
 }
