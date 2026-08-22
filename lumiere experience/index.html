@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="styles.css">
 </head>
+<body>
 
 <div class="redes-flotantes">
 
@@ -153,11 +154,92 @@
 
     <section id= "galeria" class="section">
      <h2>Galería</h2>
+     <div class="divider"></div>
 
         <p>
-            Descubre algunos de nuestros mejores trabajos en colorimetría,
-            uñas y tratamientos capilares.
+            Descubre algunos de nuestros testimonios
         </p> 
+
+        <div class="galeria-wrapper">
+    
+    <button class="btn-carrusel prev" id="btnPrev" aria-label="Anterior">&#10094;</button>
+
+    <div class="galeria-carrusel" id="carrusel">
+
+      <!-- 1. Video: cabello.mp4 -->
+      <div class="galeria-item">
+        <video controls preload="metadata">
+          <source src="img/cabello.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- 2. Foto: mono.jpeg -->
+      <div class="galeria-item">
+        <img src="img/mono.jpeg" alt="Trabajo de belleza en Lumière">
+      </div>
+
+      <!-- 3. Video: juli.mp4 -->
+      <div class="galeria-item">
+        <video controls preload="metadata">
+          <source src="img/juli.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- 4. Foto: punta.jpeg -->
+      <div class="galeria-item">
+        <img src="img/punta.jpeg" alt="Detalle de peinado Lumière">
+      </div>
+
+      <!-- 5. Video: mono.mp4 -->
+      <div class="galeria-item">
+        <video controls preload="metadata">
+          <source src="img/mono.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- 6. Video: vale.mp4 -->
+      <div class="galeria-item">
+        <video controls preload="metadata">
+          <source src="img/vale.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- 7. Video: gabi.mp4 -->
+      <div class="galeria-item">
+        <video controls preload="metadata">
+          <source src="img/gabi.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- 8. Foto: pelo.jpeg -->
+      <div class="galeria-item">
+        <img src="img/pelo.jpeg" alt="Tratamiento de cabello Lumière">
+      </div>
+
+      <!-- 9. Video: val.mp4 -->
+      <div class="galeria-item">
+        <video controls preload="metadata">
+          <source src="img/val.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- 10. Video: rojo.mp4 -->
+      <div class="galeria-item">
+        <video controls preload="metadata">
+          <source src="img/rojo.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- 11. Foto: flor.jpeg -->
+      <div class="galeria-item">
+        <img src="img/flor.jpeg" alt="Resultado de colorimetría Lumière">
+      </div>
+
+    </div>
+
+    <!-- Flecha Derecha -->
+    <button class="btn-carrusel next" id="btnNext" aria-label="Siguiente">&#10095;</button>
+  </div>
         </section>
 
         <section id="shop" class="section">
@@ -262,4 +344,7 @@
     style="border:0;"
     loading="lazy">
 </iframe>  
+<script src="script.js"></script>
+</body>
+</htlm>
 
